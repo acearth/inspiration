@@ -50,6 +50,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+   gem 'minitest-reporters'
+end
+
 group :production do
   gem 'pg', '>=0.21'
 end
