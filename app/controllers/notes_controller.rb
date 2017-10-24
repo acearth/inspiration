@@ -4,7 +4,9 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all
+    # @users = User.paginate(page: params[:page])
+
+    @notes = Note.paginate(page: params[:page])
   end
 
   # GET /notes/1
