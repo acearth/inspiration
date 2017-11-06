@@ -6,7 +6,7 @@ class NotesController < ApplicationController
   def index
     # @users = User.paginate(page: params[:page])
 
-    @notes = Note.paginate(page: params[:page])
+    @notes = Note.paginate(page: params[:page]).order("id DESC")
   end
 
   # GET /notes/1
