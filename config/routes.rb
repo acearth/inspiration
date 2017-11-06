@@ -5,5 +5,15 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
 
   resources :notes
+
+   namespace :api do
+    namespace :v1 do
+      get 'all', to: 'notes#index'
+      get 'last', to: 'notes#last'
+      post 'notes', to: 'notes#create'
+    end
+   end
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
