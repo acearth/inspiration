@@ -10,6 +10,6 @@ class Api::WechatController < ApplicationController
     info = Hash.from_xml(request.body.read)
 	  note = Note.create(content: info[:Content])
 	  note.save
-	  render status: 200
+	  render body: :success
   end
 end
