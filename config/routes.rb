@@ -13,7 +13,7 @@ Rails.application.routes.draw do
       post 'notes', to: 'notes#create'
     end
 
-    get 'hello', to: 'wechat#hello'
+    get 'wechat_add', to: 'wechat#hello'
     post 'wechat_add', to: 'wechat#add_note'
   end
 
