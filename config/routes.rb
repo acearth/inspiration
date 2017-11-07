@@ -6,13 +6,15 @@ Rails.application.routes.draw do
 
   resources :notes
 
-   namespace :api do
+  namespace :api do
     namespace :v1 do
       get 'all', to: 'notes#index'
       get 'last', to: 'notes#last'
       post 'notes', to: 'notes#create'
     end
-   end
+
+    get 'hello', to: 'wechat#hello'
+  end
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
