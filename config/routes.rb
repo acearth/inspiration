@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
 
     get 'hello', to: 'wechat#hello'
-    get 'wechat_add', to: 'wechat#add_note'
+    post 'wechat_add', to: 'wechat#add_note'
   end
 
 
