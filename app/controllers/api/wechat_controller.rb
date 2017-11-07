@@ -8,6 +8,7 @@ class Api::WechatController < ApplicationController
 
   def add_note
     info = Hash.from_xml(request.body.read)
+    puts info
 	  note = Note.create(content: info[:Content])
 	  note.save
 	  render body: :success
